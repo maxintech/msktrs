@@ -6,7 +6,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
 
-## [1.20.01] - 2020-11-26
+## [1.12.01] - 2020-11-26
  
 ### Added
 
@@ -17,9 +17,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Fixed
 
  - Issues with the new way plays and stats are stored. 
- - - Fix "Never Won" and "Most Victorious"
- - - Fix detection when a game was played by everyone or not
- - - Fix usage of base parents
+   - Fix "Never Won" and "Most Victorious"
+   - Fix detection when a game was played by everyone or not
+   - Fix usage of base parents
  
 
 ## [1.11.666] - 2020-11-07
@@ -55,11 +55,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Changed
 
  - Back to status balls in future playlist:
- - - Check Circle means all selected players agreed to know the game. It is considered as played
- - - Empty Circle means the game is new to the selected players
- - - Pause Circle means there is a players count restriction not followed for the selected players
- - - Red Question Circle means selected players played something similar. It is considered as not played by default unless selected players agreed they know it
- - - Question Circle means not all the selected players played the game. It is considered as not played by default unless selected players agreed they know it
+   - Check Circle means all selected players agreed to know the game. It is considered as played
+   - Empty Circle means the game is new to the selected players
+   - Pause Circle means there is a players count restriction not followed for the selected players
+   - Red Question Circle means selected players played something similar. It is considered as not played by default unless selected players agreed they know it
+   - Question Circle means not all the selected players played the game. It is considered as not played by default unless selected players agreed they know it
  
 ### Fixed
 
@@ -70,9 +70,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
  - Support green games list. Games in this list are treated like played, they supersede any session history. These games aren't considered for the unplayed header counter
  - Add different color backgrounds in the games list to identify several cases as follows:
- - - Add a green background for games that all selected players has been played the game at least once
- - - Add a red background for games without plays but a parent game has plays recorded
- - - Add a blue background for games the selected player count isn't the adequate
+   - Add a green background for games that all selected players has been played the game at least once
+   - Add a red background for games without plays but a parent game has plays recorded
+   - Add a blue background for games the selected player count isn't the adequate
  - Add an icon at the end of game's title line to identify Wizard's choice
  - Add icon at the end of game's title line to support "Asterisk behaviour isn't allowed" tag
   
@@ -123,10 +123,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Added
 
  - Add Charts & Stats page. It contains:
- - - Add a navigable tabbed cards with some stats for each musketeer
- - - Add a chart showing games grouped by number of plays
- - - Add a chart showing games grouped by BGG ranking ranges
- - - Add links to-from future playlist page to charts & stats page
+   - Add a navigable tabbed cards with some stats for each musketeer
+   - Add a chart showing games grouped by number of plays
+   - Add a chart showing games grouped by BGG ranking ranges
+   - Add links to-from future playlist page to charts & stats page
  - Add in the yellow checkmark's tooltip the names of the persons who don't played the game
  - Add checkbox to allow turn list sorting using aged total to false
  - Add wizard who picks the better game to play
