@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="The Musketeers Played Stats">
+    <meta name="author" content="Some contributors">
+    <title>The Musketeers - Charts & Stats</title>
+
+	<!-- Icons -->
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/favicon.png" />
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
+
+    <!-- Bootstrap core CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- FontAwesome icons -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <!-- Chart.js -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.css" integrity="sha256-aa0xaJgmK/X74WM224KMQeNQC2xYKwlAt08oZqjeF0E=" crossorigin="anonymous" />
+
+    <!-- Jquery, popper, Bootstrap & Chart.js -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script> 
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" integrity="sha256-Uv9BNBucvCPipKQ2NS9wYpJmi8DTOEfTA/nH2aoJALw=" crossorigin="anonymous"></script>
+
+    <!-- Custom styles -->
+	<link rel="stylesheet" href="./css/cmm.css" >
+
+    <!-- Page code! -->
+	<script src="./scripts/plg-100bar.js"></script>
+	<script src="./scripts/cmm.js"></script>
+	<script src="./scripts/cts.js"></script>
+  </head>
+  
+  <body class="bg-light">
+	<main role="main" class="container">
+	  <!-- header -->
+	  <div class="d-flex align-items-center p-3 my-3 text-white-50 bg-purple rounded shadow-sm">
+		<i class="fas fa-chart-pie mr-2" style="font-size:36px"></i>
+		<div class="lh-100">
+		  <h6 class="mb-0 text-white lh-100">The Musketeers - Charts & Stats</h6>
+		  <small id="header_version"></small>
+		</div>    
+
+		<div class="ml-auto text-center">
+		  <i id="info_button" class="fas fa-info" data-toggle="tooltip" title="Version log"></i>
+		  <br>
+		  <a href="./fql.html">
+		    <i id="fql_link" class="fas fa-users text-white-50" data-toggle="tooltip" title="Future gamelist"></i>
+		  </a>
+		  <br>
+		  <div id="loading_spinner" class="spinner-border spinner-border-sm invisible"></div>
+		</div>
+		
+	  </div>
+  	
+	  <!-- Version log modal -->
+	  <div id="versionlog_modal" class="modal fade" tabindex="-1" role="dialog">
+		<div class="modal-dialog modal-dialog-scrollable" role="document">
+		  <div class="modal-content">
+			<div class="modal-header">
+			  <h5 class="modal-title">Version log</h5>
+			  <button type="button" class="close" data-dismiss="modal">
+				<span aria-hidden="true">&times;</span>
+			  </button>
+			</div>
+			<div id="versionlog_body" class="modal-body"></div>
+		  </div>
+		</div>
+	  </div>  
+
+	  <!-- Table of contents modal -->
+	  <div id="toc_modal" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-dialog-scrollable" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h3 id="toc_modal_title" class="modal-title text-center">Big Title</h3>
+              <button type="button" class="close" data-dismiss="modal">×</button>
+            </div>
+            <div id="toc_modal_body" class="modal-body">
+            </div>
+          </div>
+        </div>
+	  </div>
+
+	  <!-- Alert on errors -->
+	  <div id="alert_on_error" class="alert alert-warning hidden" role="alert">
+		 Error retrieving the server data. 
+		 <p>Freaking out with dummy puppets in a swimming pool of caos.</p>
+		 <p>Call the counter madness patrol!</p>
+	  </div>
+
+      <!-- The usual suspects -->
+      <div id="usualSuspects">
+      </div>	
+
+      <!-- Global Charts --> 
+      <div id="charts">
+      </div>
+      
+	</main>
+
+  </body>
+</html>

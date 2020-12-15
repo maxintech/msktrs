@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="The Musketeers Future Playlist">
+    <meta name="author" content="Some contributors">
+    <title>The Musketeers Future Playlist</title>
+
+	<!-- Icons -->
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/favicon.png" />
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
+    
+    <!-- Bootstrap core CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- FontAwesome icons -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+    <!-- Jquery, popper & Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script> 
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <!-- Custom styles -->
+	<link rel="stylesheet" href="./css/cmm.css" >
+	
+  </head>
+  <body class="bg-light">
+
+	<main role="main" class="container">
+	  <!-- header -->
+	  <div class="d-flex align-items-center p-3 my-3 text-white-50 bg-purple rounded shadow-sm">
+		<i class="fas fa-users mr-2" style="font-size:36px"></i>
+		<div class="lh-100">
+		  <h6 class="mb-0 text-white lh-100">The Musketeers Future Playlist</h6>
+		  <small id="header_item_count"></small><br>
+		  <small id="header_version"></small>
+		</div>    
+
+		<div class="ml-auto text-center">
+		  <i id="info_button" class="fas fa-info fa-fw" data-toggle="tooltip" title="Version log"></i>
+		  <br>
+		  <a href="./cts.html">
+		    <i id="cts_link" class="fas fa-chart-pie text-white-50 fa-fw" data-toggle="tooltip" title="Charts & Stats"></i>
+		  </a>
+		  <br>
+		  <div id="loading_spinner" class="spinner-border spinner-border-sm invisible"></div>
+		</div>
+	  </div>
+
+	  <!-- Controls -->
+	  <div class="p-3 my-3 bg-light2 text-muted rounded shadow-sm">
+        <button class="btn btn-light btn-sm" type="button" data-toggle="collapse" data-target="#controls_header">
+          <i class="fas fa-caret-down"></i>
+        </button>
+        <div id="controls_header" class="collapse"> 
+          <div class="row py-2">
+            <div class="col-sm-6 py-1">
+              <div class="border-bottom border-gray mb-2">          
+                <small><i>Filter players</i></small>
+              </div>
+		      <div class="form-check">
+		        <input class="form-check-input" type="checkbox" value="agustinn" id="defaultCheck1" checked>
+    		    <label class="form-check-label small" for="defaultCheck1"><strong>Agustín</strong></label>
+	    	    <small id="defaultCheck1_desc"></small>
+	    	  </div>
+              <div class="form-check">
+	    	    <input class="form-check-input" type="checkbox" value="gus77avo" id="defaultCheck2" checked>
+		        <label class="form-check-label small" for="defaultCheck2"><strong>Gustavo</strong></label>
+    		    <small id="defaultCheck2_desc"></small>
+	    	  </div>
+		      <div class="form-check">
+    		    <input class="form-check-input" type="checkbox" value="flashshadow69" id="defaultCheck3" checked>
+	    	    <label class="form-check-label small" for="defaultCheck3"><strong>Maxi</strong></label>
+    		    <small id="defaultCheck3_desc"></small>
+	    	  </div>
+		      <div class="form-check">
+    		    <input class="form-check-input" type="checkbox" value="RaulMC" id="defaultCheck4" checked>
+	    	    <label class="form-check-label small" for="defaultCheck4"><strong>Raúl</strong></label>
+		        <small id="defaultCheck4_desc"></small>
+    		  </div>
+            </div>
+            <div class="col-sm-6 py-1">
+              <div class="border-bottom border-gray mb-2 mt-1">          
+                <small><i>Controls</i></small>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="sort_by_aged_total" checked>
+                <label class="form-check-label small" for="sort_by_aged_total"><strong>Sort by aged total</strong></label>
+              </div>
+            </div>
+          </div>
+  		  <button id="update_list" class="btn btn-secondary" type="button"><i class="fas fa-users-cog"></i> Update</button>
+        </div>
+	  </div>
+
+	  <!-- Alert on errors -->
+	  <div id="alert_on_error" class="alert alert-warning hidden" role="alert">
+		 Error retrieving the server data. Call the counter madness patrol!
+	  </div>
+	  <!-- Alert on missing votes -->
+	  <div id="alert_on_missing_votes" class="alert alert-info text-muted hidden" role="alert">
+		<h4 class="alert-heading">Missing Votes!</h4>
+		<div id="missing_votes_container"></div>
+	  </div>
+	  <!-- Alert on too many game proposed -->
+	  <div id="alert_on_too_many_games" class="alert alert-warning hidden" role="alert">
+		<h4 class="alert-heading">Too many games proposed!</h4>
+		<div id="too_many_games_container"></div>
+	  </div>
+  
+	  <!-- Items --> 
+	  <div id="items"></div> 
+  	
+	  <!-- Version log modal -->
+	  <div id="versionlog_modal" class="modal fade" tabindex="-1" role="dialog">
+		<div class="modal-dialog modal-dialog-scrollable" role="document">
+		  <div class="modal-content">
+			<div class="modal-header">
+			  <h5 class="modal-title">Version log</h5>
+			  <button type="button" class="close" data-dismiss="modal">
+				<span aria-hidden="true">&times;</span>
+			  </button>
+			</div>
+			<div id="versionlog_body" class="modal-body"></div>
+		  </div>
+		</div>
+	  </div>  
+ 
+	</main>
+
+    <!-- Page code! -->
+	<script src="./scripts/cmm.js"></script>
+	<script src="./scripts/fql.js"></script>
+
+  </body>
+</html>
