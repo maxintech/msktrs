@@ -434,7 +434,7 @@ class GetChartStatsEP < EntryPointBaseClass
 
    def getPlayers(ppData)
       players = [
-         { "username" => "agustinn", "name" => "Agustín", "color" => "#ffc107", "motto" => "Me gusta mi nuevo traje con forro suavecito." },
+         { "username" => "agustinn", "name" => "Agustín", "color" => "#ffc107", "motto" => "Yyyyy a, mmm mmm mmm yyyyy a, mm a mm a mm a, mm mm mm yyyy a." },
          { "username" => "gus77avo", "name" => "Gustavo", "color" => "#dc3545", "motto" => "¿Cómo puedo ser tan malo en todo lo que intento y ser tan genial?" },
          { "username" => "flashshadow69", "name" => "Maxi", "color" => "#6f42c1", "motto" => "Debo hacer algo... pero ya me puse la piyama." },
          { "username" => "RaulMC", "name" => "Raúl", "color" => "#28a745", "motto" => "Lo importante es no asustarse, hay reglas para situaciones como esta." }
