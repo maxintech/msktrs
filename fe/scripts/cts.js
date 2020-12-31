@@ -268,7 +268,7 @@ function createUsuspects(data) {
     }
 
     playerImage = `./images/${player.username}_figure.png`;
-    if (player.username == 'RaulMC') {
+    if (player.username == 'gus77avo') {
       playerImage = `./images/${player.username}_figure_awl_1.png`;
     }
 
