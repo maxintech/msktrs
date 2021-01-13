@@ -10,7 +10,6 @@ class Common
    FUTURE_PLAYLIST_URL = "https://www.boardgamegeek.com/xmlapi2/geeklist/243477?comments=1"
 
    BASE_MUSKETEERS = [ "agustinn", "flashshadow69", "gus77avo", "RaulMC" ] 
-   PLAYED_GEEKLIST_IDS = [ "243963", "251571", "267195" ]
       
 
    ## Getters
