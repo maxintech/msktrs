@@ -268,9 +268,6 @@ function createUsuspects(data) {
     }
 
     playerImage = `./images/${player.username}_figure.png`;
-    if (player.username == 'gus77avo' || player.username == 'RaulMC') {
-      playerImage = `./images/${player.username}_figure_awl_1.png`;
-    }
 
     aux = `
             <div class="tab-pane fade ${active}" id="${player.username}" role="tabpanel">
