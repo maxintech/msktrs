@@ -14,4 +14,4 @@ ADD . /app
 
 # Run
 EXPOSE 9292
-CMD ["bundle", "exec", "rackup", "--host", "0.0.0.0", "msktrs.ru"]
+CMD ./run.sh
