@@ -105,13 +105,13 @@ class BaseCache
   def self.redisConn
 	 begin 
 		if (@redisConn.nil? == true) then
-		   @redisConn = Redis.new({:host => "127.0.0.1"})
+		   @redisConn = Redis.new
 		else
 		   # test if the connection still alive             
 		   begin
 			  @redisConn.ping
 		   rescue Exception => e
-			  @redisConn = Redis.new({:host => "127.0.0.1"})
+			  @redisConn = Redis.new
 		   end                     
 		end
 		return @redisConn
