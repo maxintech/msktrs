@@ -5,6 +5,15 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [1.13] - 2021-06-27
+ 
+### Added
+- Local Docker support
+### Changed
+
+ - Back to normal de future play list (W.H.O. unapproved)
+ 
+### Fixed
 
 ## [1.12.01] - 2020-11-26
  

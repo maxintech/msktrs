@@ -1,7 +1,18 @@
 # msktrs
 Musketeers Future List
 
-
+## Requisitos
+- Docker
+  
+### Ejecución local
+- Ejecutar `./up.sh`
+- La app corre en `http://localhost:8191/`
+  - http://localhost:8191/fql.html
+  - http://localhost:8191/cts.html
+- El backend se puede acceder en forma directa en `http://localhost:8190/_msktrsbe/`
+  - http://localhost:8190/_msktrsbe/fql
+  - http://localhost:8190/_msktrsbe/cts
+- Redis está expuesto en `http://localhost:8192`
 
 ## TODO
 ### Pedidos externos
@@ -17,3 +28,7 @@ Musketeers Future List
 - Que excluya los juegos que sólo tiene la persona excluida
 - Lista de jugados, ordenados por cantidad de partidas, 6, 5, 4 jugados, etc... (se podría incluir el H-Index ahí)
 - Gráfico de mean/STD por plays/month
+
+### Docker
+- Hotreload para desarollo en localhost
+- Build and deploy script
