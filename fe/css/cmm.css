@@ -53,21 +53,4 @@ a { cursor: default; }
   height: 1.25em;
 }
 
-/* Void COVID stuff. Remove later */
-body, html {
-  height: 100%;
-}
-.bg { 
-  /* The image used */
-  background-image: url("https://www.psdstamps.com/wp-content/uploads/2019/11/void-stamp-png.png");
 
-  /* Full height */
-  height: 100%; 
-  width: 100%;
-
-  /* Center and scale the image nicely */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-}
-/* end of... Void COVID stuff. Remove later */
