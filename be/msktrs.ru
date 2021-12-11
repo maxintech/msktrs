@@ -529,6 +529,17 @@ class GetChartStatsEP < EntryPointBaseClass
    end   
 end
 
+# /check
+class HealthCheckEP < EntryPointBaseClass
+ 
+   def execute(req)
+      
+      out = { 
+         "OK" => Time.now.utc.iso8601
+      }      
+      return out
+   end
+end
 
 ##### MusketeersAdapter class
 # Mapping /_msktrsbe
@@ -542,7 +553,8 @@ class MusketeersAdapter
       super()
       @epMap = {
          "/fql" => GetFutureListEP.new(),
-         "/cts" => GetChartStatsEP.new()
+         "/cts" => GetChartStatsEP.new(),
+         "/check" => HealthCheckEP.new()
       }
    end	 
 
