@@ -1,0 +1,46 @@
+version: "2"
+services:
+    backend:
+        build:
+            context: ./be
+            dockerfile: ./Dockerfile
+        image: musketeers-backend
+        environment:
+            - APP_ENV=local
+            - REDIS_URL=redis://redis:6379
+        ports:
+            - "8190:9292"
+        networks:
+            - network
+        depends_on: 
+            - redis
+    frontend:
+        build:
+            context: ./fe
+            dockerfile: ./Dockerfile
+        image: musketeers-frontend
+        environment:
+            - APP_ENV=local
+            - API_UPSTREAM=http://backend:9292
+        ports:
+            - "8191:80"
+        networks:
+            - network
+        depends_on: 
+            - redis
+            - backend
+    redis:
+        image: redis:3.2.7-alpine
+        env_file: .env
+        environment:
+            - APP_ENV=local
+        expose:
+            - 6379
+        ports:
+            - "8192:6379"
+        networks:
+            - network
+
+networks:
+    network:
+        driver: bridge

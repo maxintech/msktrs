@@ -1,8 +1,14 @@
-const codeVersion = "v1.12.03";
+const codeVersion = "v1.13";
 
 function addVersionLogEntries() {
   $("#versionlog_body").empty();
   html = `
+	  <h6>v1.13 - 27 Jun, 2021</h6>
+	  <ul class="small"> 
+		<li>Added local docker support</li>
+	  </ul>
+	  <hr>
+
 	  <h6>v1.12.03 - 24 May, 2021</h6>
 	  <ul class="small"> 
 		<li>Remove the future play list due the social distancing decree (W.H.O. approved) AGAIN!</li>

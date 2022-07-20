@@ -1,0 +1,11 @@
+source 'https://rubygems.org'
+gem 'rack', '1.4.7'
+gem 'oj', '2.12.10'
+gem 'nokogiri', '1.8.1'
+#gem 'open-uri'
+gem 'redis', '3.2.1'
+gem 'msgpack', '0.6.2'
+
+
+
+
